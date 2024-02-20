@@ -1,0 +1,50 @@
+# Prerequisites
+*.d
+CMakeLists.txt.user*
+commbasemodule
+communicationclient
+communicationhost
+QtCreatorDeployment.txt
+graphviz
+build*
+instdir*
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+*.pro.*
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+# Database files
+*.db
+!default_database.db
+.DS_Store*
+_CPack_Packages
+*.bak
+*.7z
+*.vs
+log.txt
+*.save
+version.h
