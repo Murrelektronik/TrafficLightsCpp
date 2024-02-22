@@ -15,6 +15,17 @@ Window {
         id: manager
     }
 
+    Text {
+        id: title
+        text: qsTr("Traffic Lights Demo")
+        horizontalAlignment: Qt.AlignHCenter
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.horizontalCenterOffset: 20
+        font.pixelSize: 36
+        anchors.top: parent.top
+        anchors.topMargin: 10
+    }
+
     Rectangle {
         id: main
         color: "#999"
@@ -131,10 +142,10 @@ Window {
                 strokeStyle: ShapePath.DashLine
                 dashPattern: [2]
                 startX: -67.5
-                startY: -45
+                startY: -42
                 PathLine {
                     x: 68
-                    y: -45
+                    y: -42
                 }
             }
             ShapePath {
@@ -170,10 +181,10 @@ Window {
                 strokeStyle: ShapePath.DashLine
                 dashPattern: [2]
                 startX: -67.5
-                startY: 45
+                startY: 42
                 PathLine {
                     x: 68
-                    y: 45
+                    y: 42
                 }
             }
         }
@@ -185,7 +196,7 @@ Window {
         Material.foreground: "white"
         Material.roundedScale: Material.SmallScale
         x: 50
-        y: 20
+        y: 70
         onClicked: {
             console.log("Button clicked")
             manager.start()
