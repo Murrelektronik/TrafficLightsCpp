@@ -30,7 +30,7 @@ jobs:
 
 
     - name: Configure CMake
-      run: cmake -S . -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DCMAKE_PREFIX_PATH=${{github.workspace}}/qt/${{env.QT_VERSION}}/${{env.ARCH}}/
+      run: cmake -S . -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DCMAKE_PREFIX_PATH=${{github.workspace}}/qt/${{env.QT_VERSION}}/${{env.ARCH}}/bin
 
     - name: Build
       # Build your program with the given configuration
