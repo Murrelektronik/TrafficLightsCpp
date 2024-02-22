@@ -19,12 +19,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name Checkout
+      uses: actions/checkout@v3
+
     - name: Install Qt
       shell: bash
       run: |
         pip install aqtinstall
         python -m aqt install-qt --outputdir ${{github.workspace}}/qt ${{env.OS}} ${{env.PLATFORM}} ${{env.QT_VERSION}} ${{env.ARCH}} -m qtscxml
-    - uses: actions/checkout@v3
+
 
     - name: Configure CMake
       run: cmake -S . -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DCMAKE_PREFIX_PATH=${{github.workspace}}/qt/${{env.QT_VERSION}}/${{env.ARCH}}/
