@@ -26,8 +26,12 @@ jobs:
       shell: bash
       run: |
         pip install aqtinstall
-        python -m aqt install-qt --outputdir qt ${{env.OS}} ${{env.PLATFORM}} ${{env.QT_VERSION}} ${{env.ARCH}} -m qtscxml
+        python -m aqt install-qt --outputdir ${{github.workspace}}/qt ${{env.OS}} ${{env.PLATFORM}} ${{env.QT_VERSION}} ${{env.ARCH}} -m qtscxml
 
+    - name: Install Dependencies
+      shell: bash
+      run: |
+        sudo apt install libgl1-mesa-dev libxkbcommon-dev
 
     - name: Configure CMake
       run: cmake -S . -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DCMAKE_PREFIX_PATH=${{github.workspace}}/qt/${{env.QT_VERSION}}/${{env.ARCH}}
