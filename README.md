@@ -40,8 +40,23 @@ List of dependencies or prerequisites needed to build and run the project.
 
 ```bash
 git clone https://github.com/Murrelektronik/TrafficLightsCpp.git
+```
+
+2. Change Directory:
+
+```bash
 cd TrafficLightsCpp
+```
+
+3. Configure:
+
+```bash
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=<path to qt libraries>
+```
+
+4. Build:
+
+```bash
 cmake --build build --config Release
 ```
 
