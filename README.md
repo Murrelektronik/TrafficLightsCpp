@@ -1,4 +1,4 @@
-# Traffice Lights Demo
+# Traffic Lights Demo
 
 The Traffic Lights Demo project is a small simulation of a traffic light system implemented in C++ using the Qt framework. It showcases the functionality of a basic traffic light control system, including the transition between red, yellow, and green lights according to predefined timing intervals.
 
